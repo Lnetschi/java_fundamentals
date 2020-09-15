@@ -1,5 +1,7 @@
 package labs_examples.conditions_loops.labs;
 
+import java.util.Scanner;
+
 /**
  * Conditions and Loops Exercise 2: Days of the week
  *
@@ -17,5 +19,26 @@ public class Exercise_02 {
         // 3) assign input to variable as int
         // 4) write completed code here
 
+        Scanner day = new Scanner(System.in);
+        System.out.println("Choose a number 1 - 7 to pick a day of the week:");
+        int i = day.nextInt();
+
+        if (i == 1) {
+            System.out.println("Monday");
+        } else if (i == 2) {
+            System.out.println("Tuesday");
+        } else if (i == 3) {
+            System.out.println("Wednesday");
+        } else if (i == 4) {
+            System.out.println("Thursday");
+        } else if (i == 5) {
+            System.out.println("Friday");
+        } else if (i == 6) {
+            System.out.println("Saturday");
+        } else if (i == 7) {
+            System.out.println("Sunday");
+        } else {
+            System.out.println("Not a number 1 - 7");
+        }
     }
 }

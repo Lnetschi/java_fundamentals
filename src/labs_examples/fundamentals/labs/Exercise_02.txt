@@ -11,7 +11,7 @@ Initializing git folder
         c. Add file
         d. Commit file
         c. On Github, create new git_practice repository
-        d. Add this new GitHub repository as a new "remote" to your local Git repo. You can do this by using the command
+        d. Add this new GitHub repository as a new "remotecd ~" to your local Git repo. You can do this by using the command
             git remote add <ANY_NAME> <URL_OF_NEW_GITHUB_REPO.git>
         d. Push commit file to Github
         e. Practice the following git flow until you feel comfortable:
@@ -32,3 +32,122 @@ Cloning repository from Github
     3. Create new repository on Github
     4. Add new remote on local machine
     5. Push to new Github repository
+
+    C:\Program Files\cmder
+    λ cd C:\Users\12399\Documents\CodingNomads\
+
+    C:\Users\12399\Documents\CodingNomads (master)
+    λ mkdir git_practice
+
+    C:\Users\12399\Documents\CodingNomads (master)
+    λ cd C:\Users\12399\Documents\CodingNomads\git_practice\
+
+    C:\Users\12399\Documents\CodingNomads\git_practice (master)
+    λ git init
+    Initialized empty Git repository in C:/Users/12399/Documents/CodingNomads/git_practice/.git/
+
+    C:\Users\12399\Documents\CodingNomads\git_practice (master)
+    λ vim file_1.txt
+
+    C:\Users\12399\Documents\CodingNomads\git_practice (master)
+    λ ls -al
+    total 13
+    drwxr-xr-x 1 Lisa 197121  0 Sep  3 09:10 ./
+    drwxr-xr-x 1 Lisa 197121  0 Sep  3 08:49 ../
+    drwxr-xr-x 1 Lisa 197121  0 Sep  3 09:09 .git/
+    -rw-r--r-- 1 Lisa 197121 11 Sep  3 09:10 file_1.txt
+
+   C:\Users\12399\Documents\CodingNomads\git_practice (master)
+   λ git add file_1.txt
+
+   C:\Users\12399\Documents\CodingNomads\git_practice (master)
+   λ git commit
+
+   C:\Users\12399\Documents\CodingNomads\git_practice (master)
+   λ git remote add origin https://github.com/Lnetschi/new-git-practice.git
+
+   C:\Users\12399\Documents\CodingNomads\git_practice (master -> origin)
+   λ vim text_2.txt
+
+   C:\Users\12399\Documents\CodingNomads\git_practice (master -> origin)
+   λ git add text_2.txt
+
+C:\Users\12399\Documents\CodingNomads\git_practice (master -> origin)
+λ git commit -m 'text2'
+
+    C:\Users\12399\Documents\CodingNomads\git_practice (master -> origin)
+    λ git push
+
+    // Adding new remote //
+
+    C:\Users\12399\Documents\CodingNomads\git_practice (master -> origin)
+    λ cd C:\Users\12399\Documents\CodingNomads\
+
+    C:\Users\12399\Documents\CodingNomads (master)
+    λ mkdir git_practice_2
+
+    C:\Users\12399\Documents\CodingNomads (master)
+    λ cd C:\Users\12399\Documents\CodingNomads\git_practice_2\
+
+   C:\Users\12399\Documents\CodingNomads\git_practice_2 (master)
+   λ git init
+
+   C:\Users\12399\Documents\CodingNomads\git_practice_2 (master)
+   λ git init
+   Initialized empty Git repository in C:/Users/12399/Documents/CodingNomads/git_practice_2/.git/
+
+   C:\Users\12399\Documents\CodingNomads\git_practice_2 (master)
+   λ git remote add origin https://github.com/Lnetschi/git_practice_2.git
+
+   C:\Users\12399\Documents\CodingNomads\git_practice_2 (master)
+   λ git remote -v
+   origin  https://github.com/Lnetschi/git_practice_2.git (fetch)
+   origin  https://github.com/Lnetschi/git_practice_2.git (push)
+
+   //clone repository //
+
+    C:\Users\12399\Documents\CodingNomads (master)
+    λ mkdir clone_temp
+
+    C:\Users\12399\Documents\CodingNomads (master)
+    λ cd clone_temp\
+
+    C:\Users\12399\Documents\CodingNomads\clone_temp (master)
+    λ git clone https://github.com/poelzi/git-clone-test.git
+    Cloning into 'git-clone-test'...
+    remote: Enumerating objects: 14, done.
+    remote: Total 14 (delta 0), reused 0 (delta 0), pack-reused 14
+    Unpacking objects: 100% (14/14), 1.55 KiB | 2.00 KiB/s, done.
+
+    C:\Users\12399\Documents\CodingNomads\clone_temp (master)
+    λ ls -al
+    total 8
+    drwxr-xr-x 1 Lisa 197121 0 Sep  8 18:51 ./
+    drwxr-xr-x 1 Lisa 197121 0 Sep  8 18:50 ../
+    drwxr-xr-x 1 Lisa 197121 0 Sep  8 18:51 git-clone-test/
+
+    C:\Users\12399\Documents\CodingNomads\clone_temp (master)
+    λ cd git-clone-test\
+
+    C:\Users\12399\Documents\CodingNomads\clone_temp\git-clone-test (master -> origin)
+    λ git remote -v
+    origin  https://github.com/poelzi/git-clone-test.git (fetch)
+    origin  https://github.com/poelzi/git-clone-test.git (push)
+
+    C:\Users\12399\Documents\CodingNomads\clone_temp\git-clone-test (master -> origin)
+    λ git remote add Lisa https://github.com/Lnetschi/clone_temp.git
+
+    C:\Users\12399\Documents\CodingNomads\clone_temp\git-clone-test (master -> origin)
+    λ git remote -v
+    Lisa    https://github.com/Lnetschi/clone_temp.git (fetch)
+    Lisa    https://github.com/Lnetschi/clone_temp.git (push)
+    origin  https://github.com/poelzi/git-clone-test.git (fetch)
+    origin  https://github.com/poelzi/git-clone-test.git (push)
+
+    C:\Users\12399\Documents\CodingNomads\clone_temp\git-clone-test (master -> origin)
+    λ git push Lisa master
+
+
+
+
+

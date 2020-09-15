@@ -22,3 +22,54 @@ Example Output (pwd):
     1. Cadens-MacBook-Pro:CodingNomads cadenmackenzie$ pwd
        /Users/cadenmackenzie/Documents/CodingNomads
 
+
+C:\Program Files\cmder
+λ cd C:\Users\12399\Documents\CodingNomads\
+
+C:\Users\12399\Documents\CodingNomads
+λ mkdir Terminal_testing
+
+C:\Users\12399\Documents\CodingNomads
+λ cd C:\Users\12399\Documents\CodingNomads\Terminal_testing\
+
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+λ vim text_1.txt
+
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+λ cd C:\Users\12399\Documents\CodingNomads\Terminal_testing\
+
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+λ vim text_2.txt
+
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+λ vim text_3.txt
+
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+λ pwd
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+λ ls -al
+total 11
+drwxr-xr-x 1 Lisa 197121  0 Aug 31 23:54 ./
+drwxr-xr-x 1 Lisa 197121  0 Aug 31 23:51 ../
+-rw-r--r-- 1 Lisa 197121 12 Aug 31 23:53 text_1.txt
+-rw-r--r-- 1 Lisa 197121 12 Aug 31 23:53 text_2.txt
+-rw-r--r-- 1 Lisa 197121 12 Aug 31 23:54 text_3.txt
+
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+λ cp \Users\12399\Documents\CodingNomads\Terminal_testing\text_1.txt \Users\12399\Documents\CodingNomads\Terminal_testing\terminal_testing_2\
+
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+λ mv \Users\12399\Documents\CodingNomads\Terminal_testing\text_2.txt \Users\12399\Documents\CodingNomads\Terminal_testing\terminal_testing_2\
+
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+λ rm text_3.txt
+
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+λ rm -r terminal_testing_2
+
+
+C:\Users\12399\Documents\CodingNomads\Terminal_testing
+λ cat text_1.txt
+text file 1

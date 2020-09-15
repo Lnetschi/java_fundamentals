@@ -24,6 +24,15 @@ public class Exercise_02 {
     public static void main(String[] args) {
 
         // write code here
+        int i = 10;
+        double x = (int) i;
+        System.out.println("Double = " +i);
 
+
+        double j = 10.5;
+        int w = (int) j;
+        System.out.println("Int = " + w);
+        //Information is lost when narrowing a double into an int because an int can only hold whole numbers.
     }
+
 }
