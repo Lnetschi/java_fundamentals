@@ -26,6 +26,39 @@ public class Exercise_02 {
         System.out.println("Choose a number 1 - 7 to pick a day of the week:");
         int i = day.nextInt();
 
+        if(i < 1 || i > 7) {
+            System.out.println("invalid number please try again");
+            return;
+        }
+
+        if(i > 1) {
+            if(i > 2) {
+                if(i > 3) {
+                    if(i > 4) {
+                        if(i > 5) {
+                            if(i > 6) {
+                                if(i == 7) {
+                                    System.out.println("sunday");
+                                }
+                            } else {
+                                System.out.println("saturday");
+                            }
+                        } else {
+                            System.out.println("friday");
+                        }
+                    } else {
+                        System.out.println("thursday");
+                    }
+                } else {
+                    System.out.println("wednesday");
+                }
+            } else {
+                System.out.println("tuesday");
+            }
+        }else {
+            System.out.println("monday");
+        }
+
         if (i == 1) {
             System.out.println("Monday");
         } else if (i == 2) {
