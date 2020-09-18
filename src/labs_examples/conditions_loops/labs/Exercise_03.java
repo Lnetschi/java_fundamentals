@@ -14,7 +14,7 @@ public class Exercise_03 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Type a number to choose a month :");
+        System.out.println("Type a number to choose a month: ");
         int number = scanner.nextInt();
 
 
