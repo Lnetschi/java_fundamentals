@@ -11,15 +11,12 @@ public class Exercise_08 {
 
     public static void main(String[] args) {
 
-        int count = 10;
+        int count = 1000;
 
         do {
             System.out.println(count);
-        count--;
-        }while (count > 0);
-        System.out.println(count);
-
-        }
-
+            count -= 3;
+        } while (count > 0);
     }
+}
 
