@@ -16,7 +16,7 @@ public class Exercise_06 {
         int i = 1;
         int sum = 0;
         while (i <= 100) {
-            sum = sum + i;
+            sum += i;
             i++;
         }
         System.out.println(sum);
