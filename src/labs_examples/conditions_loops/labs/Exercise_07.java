@@ -21,26 +21,24 @@ public class Exercise_07 {
 
         Scanner s = new Scanner(System.in);
         System.out.print("Type a word: ");
-        String n = s.next();
+        String userInput = s.next();
 
 
-        String vowel = "aeiou";
+        String vowels = "aeiou";
 
         int i = 0;
 
-        while (i < n.length()) {
-            char c = n.charAt(i);
-            vowel.indexOf(c);
-            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-                System.out.println("First vowel is: " + c);
+        while (i < userInput.length()) {
+            char c = userInput.charAt(i);
+
+            if (vowels.indexOf(c) != -1) {
+                System.out.println("The first vowel in " + userInput + " is " + c);
                 break;
             }
-                i++;
-            }
-        System.out.println("Your word is: " + n);
+            i++;
         }
-
     }
+}
 
 
 

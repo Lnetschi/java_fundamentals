@@ -19,24 +19,26 @@ public class Exercise_05 {
     public static void main(String[] args) {
 
 
-        int i = 0;
-        int x = 0;
-        int sum = 0;
+        double i = 0;
+        double x = 0;
+        double sum = 0;
+        int count = 0;
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Pick first number: ");
-        i = scanner.nextInt();
+        i = scanner.nextDouble();
 
         System.out.println("Pick second number: ");
-        x = scanner.nextInt();
+        x = scanner.nextDouble();
 
 
-        for (i = 0; i <= x; i++) {
+        for (; i <= x; i++) {
             sum += i;
+            count++;
         }
         System.out.println("you numbers equal: " + sum);
-        double avg = (double) i / 2;
+        double avg = sum / count;
         System.out.println("average = " + avg);
     }
 }
