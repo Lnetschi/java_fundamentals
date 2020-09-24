@@ -18,6 +18,19 @@ package labs_examples.arrays.labs;
 public class Exercise_03 {
 
     public static void main(String[] args) {
-        
+
+        int[][] twoDArray = new int[5][5];
+
+        int count = 3;
+
+        for(int i = 0; i < twoDArray.length; i ++) {
+            for(int x = 0; x < twoDArray[i].length; x ++) {
+                twoDArray[i][x] = count;
+                count += 3;
+                System.out.print(twoDArray[i][x] + " ");
+
+            }
+                System.out.println();
+        }
     }
 }

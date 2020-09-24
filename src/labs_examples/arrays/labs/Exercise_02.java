@@ -1,5 +1,8 @@
 package labs_examples.arrays.labs;
 
+
+import java.util.Scanner;
+
 /**
  *  More labs_examples.arrays
  *
@@ -15,7 +18,13 @@ public class Exercise_02 {
         int[] array = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
         // write code here
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Pick a number 1 - 10: ");
+        int i = scan.nextInt();
 
-
+            System.out.print("Index of element is "  + (array[i - 1] -1) +" : Your number was " + i);
     }
 }
+
+
+
