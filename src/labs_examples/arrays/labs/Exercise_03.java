@@ -23,8 +23,8 @@ public class Exercise_03 {
 
         int count = 3;
 
-        for(int i = 0; i < twoDArray.length; i ++) {
-            for(int x = 0; x < twoDArray[i].length; x ++) {
+        for(int i = 0; i < twoDArray.length; i++) {
+            for(int x = 0; x < twoDArray[i].length; x++) {
                 twoDArray[i][x] = count;
                 count += 3;
                 System.out.print(twoDArray[i][x] + " ");
