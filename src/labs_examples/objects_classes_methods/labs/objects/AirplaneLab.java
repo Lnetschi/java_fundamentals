@@ -1,133 +1,146 @@
 package labs_examples.objects_classes_methods.labs.objects;
 
+import java.util.Arrays;
+
 public class AirplaneLab {
 
     public static void main(String[] args) {
 
-        Airplane myAirplane = new Airplane(256.3, "full");
+        Fuel fuel = new Fuel(256.3, "full");
+        Passengers passengers = new Passengers("Joe", "Smith", 36);
+        Seats seats = new Seats(11, 'a', true);
+        Windows windows = new Windows(25,15);
+        Plane myPlane = new Plane("blue", "Delta", passengers, seats, windows, fuel);
 
-        AirplaneColor myColor = new AirplaneColor("yellow");
 
-        Plane myPlane = new Plane(myAirplane, "yellow", 6, 10, 5);
+        System.out.println("A passenger will be flying today on a " + myPlane.color + " " + myPlane.airlineName + " airplane. His name is " + passengers.firstName + " " + passengers.lastName +
+                " and he is " + passengers.age + " years old. He is assigned to seat " + seats.seatNumber + seats.seatLetter + " which is a "
+                + seats.isExitRow + " exit row. The window he is next to is " + windows.height + " inches height by " + windows.width + " inches width. The fuel capacity of the plane is "
+                + fuel.fuelCapacity + " and the current fuel level is " + fuel.currentFuelLevel + ".");
 
-
-      System.out.println("This plane is " + myColor.color + " has " + myPlane.passengers
-               + " passengers, has " + myPlane.seats + " seats, and has " + myPlane.windows + " windows. Its fuel capacity is "
-                + myAirplane.fuelCapacity + " gallons and the current fuel level is at " + myAirplane.currentFuelLevel + ".");
 
         System.out.println(myPlane.toString());
     }
 }
 
-class Airplane {
+class Fuel {
 
     double fuelCapacity;
     String currentFuelLevel;
 
-    public Airplane(double fuelCapacity, String currentFuelLevel) {
+    public Fuel(double fuelCapacity, String currentFuelLevel) {
         this.fuelCapacity = fuelCapacity;
         this.currentFuelLevel = currentFuelLevel;
     }
 
     @Override
     public String toString() {
-        return "Airplane{" +
+        return "Fuel{" +
                 "fuelCapacity=" + fuelCapacity +
                 ", currentFuelLevel='" + currentFuelLevel + '\'' +
                 '}';
     }
 }
 
- class AirplaneColor {
 
-    String color;
-
-    public AirplaneColor(String color) {
-        this.color = color;
-    }
-
-     @Override
-     public String toString() {
-         return "AirplaneColor{" +
-                 "color='" + color + '\'' +
-                 '}';
-     }
- }
 
  class Passengers {
 
-    int passengers;
+    String firstName;
+    String lastName;
+    int age;
 
-     public Passengers(int passengers) {
-        this.passengers = passengers;
-    }
+     public Passengers(String firstName, String lastName, int age) {
+         this.firstName = firstName;
+         this.lastName = lastName;
+         this.age = age;
+     }
 
      @Override
      public String toString() {
          return "Passengers{" +
-                 "passengers=" + passengers +
+                 "firstName='" + firstName + '\'' +
+                 ", lastName='" + lastName + '\'' +
+                 ", age=" + age +
                  '}';
      }
  }
 
 class Seats {
 
-    int seats;
+    int seatNumber;
+    char seatLetter;
+    boolean isExitRow;
 
-    public Seats(int seats) {
-        this.seats = seats;
+    public Seats(int seatNumber, char seatLetter, boolean isExitRow) {
+        this.seatNumber = seatNumber;
+        this.seatLetter = seatLetter;
+        this.isExitRow = isExitRow;
     }
 
     @Override
     public String toString() {
         return "Seats{" +
-                "seats=" + seats +
+                "seatNumber=" + seatNumber +
+                ", seatLetter=" + seatLetter +
+                ", isExitRow=" + isExitRow +
                 '}';
     }
 }
 
 class Windows {
 
-    int windows;
+    int height;
+    int width;
 
-    public Windows(int windows) {
-        this.windows = windows;
+    public Windows(int height, int width) {
+        this.height = height;
+        this.width = width;
     }
 
     @Override
     public String toString() {
         return "Windows{" +
-                "windows=" + windows +
+                "height=" + height +
+                ", width=" + width +
                 '}';
     }
 }
 
 class Plane {
-    Airplane airplane;
     String color;
-    int passengers;
-    int seats;
-    int windows;
+    String airlineName;
+    Passengers passengers;
+    Seats seats;
+    Windows windows;
+    Fuel fuel;
 
-    public Plane(Airplane airplane, String color, int passengers, int seats, int windows) {
-
-        this.airplane = airplane;
+    public Plane(String color, String airlineName, Passengers passengers, Seats seats, Windows windows, Fuel fuel) {
         this.color = color;
+        this.airlineName = airlineName;
         this.passengers = passengers;
         this.seats = seats;
         this.windows = windows;
+        this.fuel = fuel;
     }
 
     @Override
     public String toString() {
         return "Plane{" +
-                "airplane=" + airplane +
-                ",\n color='" + color + '\'' +
+                "color='" + color + '\'' +
+                ",\n airlineName='" + airlineName + '\'' +
                 ",\n passengers=" + passengers +
                 ",\n seats=" + seats +
                 ",\n windows=" + windows +
+                ",\n fuel=" + fuel +
                 '}';
     }
 }
+
+
+
+
+
+
 
 
