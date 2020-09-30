@@ -30,7 +30,7 @@ public class Exercise_03 {
                 System.out.print(twoDArray[i][x] + " ");
 
             }
-                System.out.println();
+            System.out.println();
         }
     }
 }

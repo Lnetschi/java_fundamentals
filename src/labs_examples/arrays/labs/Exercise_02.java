@@ -22,7 +22,16 @@ public class Exercise_02 {
         System.out.print("Pick a number 1 - 10: ");
         int i = scan.nextInt();
 
-            System.out.print("Index of element is "  + (array[i - 1] -1) +" : Your number was " + i);
+        if(i <= 10 && i >= 1) {
+            for(int x = 0; x < array.length; x++) {
+                if (array[x] == i) {
+                    System.out.print("Index of element is "  + x + " : Your number was " + i);
+                    break;
+                }
+            }
+        } else {
+            System.out.println("invalid number");
+        }
     }
 }
 

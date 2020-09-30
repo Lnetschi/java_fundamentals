@@ -17,14 +17,8 @@ public class Exercise_04 {
                 {987, 65, 43, 21},
         };
 
-        for (int i = 0; i < irregArray.length; i++) {
-            for (int x = 0; x < irregArray[i].length; x++) {
-
-            }
-        }
-
-        for (int[] value : irregArray) {
-            for (int val : value) {
+        for (int[] nums : irregArray) {
+            for (int val : nums) {
                 System.out.print(" : " + val);
             }
             System.out.println();
