@@ -14,8 +14,7 @@ public class AirplaneLab {
 
 
         System.out.println("A passenger flying on " + myPlane.airlineName + " airlines is named " + passengers.firstName + " " + passengers.lastName +
-                " and he is " + passengers.age + " years old. He is assigned to seat " + seats.seatNumber + seats.seatLetter + " which is a "
-                + seats.isExitRow + " exit row. The window he is looking out of is " + windows.height + " inches height by " + windows.width + " inches width. The fuel capacity of the plane is "
+                " and is " + passengers.age + " years old. His assigned seat is " + seats.seatNumber + seats.seatLetter + " which is an exit row. The window he is looking out of is " + windows.height + " inches height by " + windows.width + " inches width. The fuel capacity of the plane is "
                 + fuel.fuelCapacity + " and the current fuel level is " + fuel.currentFuelLevel + ".");
 
 
