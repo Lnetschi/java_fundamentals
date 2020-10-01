@@ -1,21 +1,32 @@
 package labs_examples.objects_classes_methods.labs.objects;
 
-import java.util.Arrays;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class AirplaneLab {
 
     public static void main(String[] args) {
 
         Fuel fuel = new Fuel(256.3, "full");
-        Passengers passengers = new Passengers("Joe", "Smith", 36);
-        Seats seats = new Seats(11, 'a', true);
-        Windows windows = new Windows(25,15);
-        Plane myPlane = new Plane("Delta", passengers, seats, windows, fuel);
+        Passenger joe = new Passenger("Joe", "Smith", 36);
+        Passenger bob = new Passenger("Bob", "Smith", 36);
+        Seat seat = new Seat(11, 'a', true);
+        Seat chair = new Seat(12, 'b', false);
+        Window window = new Window(25,15);
+        Window glass = new Window(30,20);
+        ArrayList<Passenger> passengers = new ArrayList<>();
+        passengers.add(joe);
+        passengers.add(bob);
+        ArrayList<Seat> seats = new ArrayList<>();
+        seats.add(seat);
+        seats.add(chair);
+        ArrayList<Window> windows = new ArrayList<>();
+        windows.add(window);
+        windows.add(glass);
+
+        Plane myPlane = new Plane("Allegiant", passengers, seats, windows, fuel);
 
 
-        System.out.println("A passenger flying on " + myPlane.airlineName + " airlines is named " + passengers.firstName + " " + passengers.lastName +
-                " and is " + passengers.age + " years old. His assigned seat is " + seats.seatNumber + seats.seatLetter + " which is an exit row. The window he is looking out of is " + windows.height + " inches height by " + windows.width + " inches width. The fuel capacity of the plane is "
-                + fuel.fuelCapacity + " and the current fuel level is " + fuel.currentFuelLevel + ".");
 
 
         System.out.println(myPlane.toString());
@@ -43,13 +54,13 @@ class Fuel {
 
 
 
- class Passengers {
+ class Passenger {
 
     String firstName;
     String lastName;
     int age;
 
-     public Passengers(String firstName, String lastName, int age) {
+     public Passenger(String firstName, String lastName, int age) {
          this.firstName = firstName;
          this.lastName = lastName;
          this.age = age;
@@ -65,13 +76,13 @@ class Fuel {
      }
  }
 
-class Seats {
+class Seat {
 
     int seatNumber;
     char seatLetter;
     boolean isExitRow;
 
-    public Seats(int seatNumber, char seatLetter, boolean isExitRow) {
+    public Seat(int seatNumber, char seatLetter, boolean isExitRow) {
         this.seatNumber = seatNumber;
         this.seatLetter = seatLetter;
         this.isExitRow = isExitRow;
@@ -87,12 +98,12 @@ class Seats {
     }
 }
 
-class Windows {
+class Window {
 
     int height;
     int width;
 
-    public Windows(int height, int width) {
+    public Window(int height, int width) {
         this.height = height;
         this.width = width;
     }
@@ -108,12 +119,12 @@ class Windows {
 
 class Plane {
     String airlineName;
-    Passengers passengers;
-    Seats seats;
-    Windows windows;
+    ArrayList<Passenger> passengers;
+    ArrayList<Seat> seats;
+    ArrayList<Window> windows;
     Fuel fuel;
 
-    public Plane(String airlineName, Passengers passengers, Seats seats, Windows windows, Fuel fuel) {
+    public Plane(String airlineName, ArrayList<Passenger> passengers, ArrayList<Seat> seats, ArrayList<Window> windows, Fuel fuel) {
         this.airlineName = airlineName;
         this.passengers = passengers;
         this.seats = seats;
@@ -124,11 +135,11 @@ class Plane {
     @Override
     public String toString() {
         return "Plane{" +
-                ", airlineName='" + airlineName + '\'' +
-                ",\n passengers=" + passengers +
-                ",\n seats=" + seats +
-                ",\n windows=" + windows +
-                ",\n fuel=" + fuel +
+                "airlineName='" + airlineName + '\'' +
+                ", passengers=" + passengers +
+                ", seats=" + seats +
+                ", windows=" + windows +
+                ", fuel=" + fuel +
                 '}';
     }
 }
