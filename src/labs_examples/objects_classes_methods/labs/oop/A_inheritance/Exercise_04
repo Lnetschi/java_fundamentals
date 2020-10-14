@@ -1,7 +1,8 @@
 
 Without running the code below, please tell me what it will print.
 
-
+*** Child called prints because the method is calling for the object c to doSomething. c is an object of the child class
+so it will print from that class.
 
 public class InheritanceTest
 {

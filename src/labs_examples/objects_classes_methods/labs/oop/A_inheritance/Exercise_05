@@ -1,7 +1,8 @@
 
 Without running the code below, please tell me what will print. Why?
 
-
+*** Will print out both Parent Called and Child Called because the method is not calling the object to do anything so
+each class should just print in order of parent class first then child class.
 
 
 public class InheritanceTest

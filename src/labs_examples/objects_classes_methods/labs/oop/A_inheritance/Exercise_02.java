@@ -3,7 +3,9 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 /**
  * Run the class below and study the output. What prints and why?
  *
- * Your answer:
+ * Your answer: 10 prints because the object created extends class A (the parent class).
+ *  B extends class A so it will inherit the instance variable from that class. The method calls the object a to get the
+ *  value of i.
  *
  */
 class A {
